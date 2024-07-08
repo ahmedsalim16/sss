@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">age</th>
+        <th scope="col">address</th>
+        <th scope="col">City</th>
+        <th scope="col">grade</th>
+        <th scope="col">Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+            <tr *ngFor="let index of shared.studentList;let i=index">
+                
+                <td>{{i+1}}</td>
+                <td>{{index.id}}</td>
+                <td>{{index.Fname}}</td>
+                <td>{{index.Lname}}</td>
+                <td>{{index.email}}</td>
+                <td>{{index.age}}</td>
+                <td>{{index.address}}</td>
+                <td>{{index.city}}</td>
+                <td>{{index.grade}}</td>
+                <td>{{index.gender}}</td>
+                <button type="button" class="btn btn-danger" (click)="delete(index.id)">delete</button>
+              
+              </tr>
+
+       
+      
+     
+    </tbody>
+  </table>
