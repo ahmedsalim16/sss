@@ -22,34 +22,57 @@ export class StudentComponent implements OnInit{
   }
 
   student ={
-    id:0,
-    Fname:'',
-    Lname:'',
+    // id:0,
+    firstName:'',
+    lastName:'',
     email:'',
-    age:0,
     address:'',
     city:'',
     grade:0,
-    gender:''
+    gender:'',
+    age:0
 
   }
   
 
   addStudent(){
-    this.shared.studentList.push(this.student);
-    this.student={
-      id:0,
-      Fname:'',
-      Lname:'',
-      email:'',
-      age:0,
-      address:'',
-      city:'',
-      grade:0,
-      gender:''
+ 
+    
+    this.shared.createNewStudent(this.student) .subscribe(
+      res=>{
+        this.student={
+          // id:0,
+          firstName:'',
+          lastName:'',
+          email:'',
+          address:'',
+          city:'',
+          grade:0,
+          gender:'',
+          age:0
+      
+        }
+        console.log(res)
+        
+      },
+      err=>{
+        console.log(err);
+      }
+    );
+    // this.shared.studentList.push(this.student);
+    // this.student={
+    //   // id:0,
+    //   firstName:'',
+    //   lastName:'',
+    //   email:'',
+    //   age:0,
+    //   address:'',
+    //   city:'',
+    //   grade:0,
+    //   gender:''
   
-    }
-   console.log(this.student) 
+    // }
+  
   }
 }
 
