@@ -1,8 +1,8 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <!-- <th scope="col">ID</th> -->
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">ID</th>
         <th scope="col">First name</th>
         <th scope="col">Last name</th>
         <th scope="col">Email</th>
@@ -17,8 +17,8 @@
         
             <tr *ngFor="let index of student;let i=index">
                 
-                <td>{{i+1}}</td>
-                <!-- <td>{{index.id}}</td> -->
+                <!-- <td>{{i+1}}</td> -->
+                <td>{{index.id}}</td>
                 <td>{{index.firstName}}</td>
                 <td>{{index.lastName}}</td>
                 <td>{{index.email}}</td>

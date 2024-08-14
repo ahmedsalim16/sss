@@ -58,7 +58,9 @@ export class StudentComponent implements OnInit{
       err=>{
         console.log(err);
       }
+      
     );
+    
     // this.shared.studentList.push(this.student);
     // this.student={
     //   // id:0,
